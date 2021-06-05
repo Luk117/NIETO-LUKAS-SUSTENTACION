@@ -71,7 +71,13 @@ public class Main extends Application {
         Button addButton = new Button ("Agregar");
         addButton.setOnAction(e -> addButtonClicked());
         Button deleteButton = new Button ("Eliminar");
+        deleteButton.setOnAction(e->deleteButtonClicked());
+
+
+
         //addButton.setOnAction(e -> deleteButtonClicked());
+
+
 
         HBox hBox = new HBox ();
         hBox.setPadding(new Insets(10,10,10,10));
@@ -105,14 +111,14 @@ public class Main extends Application {
 
     }
 
-    //Delete button clicked
-    //public void deleteButtonClicked() {
-        //ObservableList<Persona> personaSelected, allPersonas;
-        //allPersonas = table.getItems();
-        //personaSelected = table.getSelectionModel().getSelectedItems();
+    public void deleteButtonClicked(){
+      ObservableList<Persona> personaSelected, allPersonas;
+        allPersonas = table.getItems();
+        personaSelected = table.getSelectionModel().getSelectedItems();
 
-        //personaSelected.forEach();
-  // }
+        personaSelected.forEach(allPersonas::remove);
+   }
+
 
 
 
@@ -129,6 +135,10 @@ public class Main extends Application {
         personas.add(new Persona("Juliana", "choque de automovil",50));
         personas.add(new Persona("Jose", "gas lacrimogeno",19));
         return personas;
+    }
+
+    private void setUpMenu(){
+
     }
 
 
