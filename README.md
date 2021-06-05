@@ -1,10 +1,12 @@
-![img.png](img.png)
 
 
-![img_1.png](img_1.png)
+AGREGAR PERSONA
+![img_4.png](img_4.png)
+![img_5.png](img_5.png)
 
+ELIMINAR PERSONA
 
-
-
-![img_2.png](img_2.png)
-![img_3.png](img_3.png)
+Seleccion
+![img_6.png](img_6.png)
+Eliminado
+![img_7.png](img_7.png)
