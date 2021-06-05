@@ -38,8 +38,26 @@ public class Persona {
     }
 
     public void setAge(double age) {
-        this.age = age;
+        try{
+
+            if(age<1){
+                throw new PersonaException(PersonaException.BAD_AGE_LOWER);
+            }
+            if(age>120){
+                throw new PersonaException(PersonaException.BAD_AGE_UPPER);
+            }
+
+            this.age = age;
+
+        }catch (NumberFormatException | PersonaException er){
+            try {
+                throw new PersonaException(PersonaException.BAD_AGE);
+            } catch (PersonaException personaException) {
+                personaException.printStackTrace();
+            }
+        }
     }
+
 
 
 }

@@ -125,15 +125,51 @@ public class Main extends Application {
     //Get ALL People
     public ObservableList<Persona> getPersona() {
         ObservableList<Persona> personas = FXCollections.observableArrayList();
-        personas.add(new Persona("Julian", "gas lacrimogeno",20));
-        personas.add(new Persona("Miguel", "perdida de ojo",27));
-        personas.add(new Persona("Juan", "disparo",23));
-        personas.add(new Persona("Sebastian", "caida",28));
-        personas.add(new Persona("Pablo", "gas lacrimogeno",26));
-        personas.add(new Persona("Julian", "gas lacrimogeno",29));
-        personas.add(new Persona("Maria", "Abuso Policial",33));
-        personas.add(new Persona("Juliana", "choque de automovil",50));
-        personas.add(new Persona("Jose", "gas lacrimogeno",19));
+        try {
+            personas.add(new Persona("Julian", "gas lacrimogeno",20));
+        } catch (PersonaException personaException) {
+            personaException.printStackTrace();
+        }
+        try {
+            personas.add(new Persona("Miguel", "perdida de ojo",27));
+        } catch (PersonaException personaException) {
+            personaException.printStackTrace();
+        }
+        try {
+            personas.add(new Persona("Juan", "disparo",23));
+        } catch (PersonaException personaException) {
+            personaException.printStackTrace();
+        }
+        try {
+            personas.add(new Persona("Sebastian", "caida",28));
+        } catch (PersonaException personaException) {
+            personaException.printStackTrace();
+        }
+        try {
+            personas.add(new Persona("Pablo", "gas lacrimogeno",26));
+        } catch (PersonaException personaException) {
+            personaException.printStackTrace();
+        }
+        try {
+            personas.add(new Persona("Julian", "gas lacrimogeno",29));
+        } catch (PersonaException personaException) {
+            personaException.printStackTrace();
+        }
+        try {
+            personas.add(new Persona("Maria", "Abuso Policial",33));
+        } catch (PersonaException personaException) {
+            personaException.printStackTrace();
+        }
+        try {
+            personas.add(new Persona("Juliana", "choque de automovil",50));
+        } catch (PersonaException personaException) {
+            personaException.printStackTrace();
+        }
+        try {
+            personas.add(new Persona("Jose", "gas lacrimogeno",19));
+        } catch (PersonaException personaException) {
+            personaException.printStackTrace();
+        }
         return personas;
     }
 
